@@ -7,7 +7,7 @@
 import os
 root = '/works/disintegrationloops'
 
-for step in range(1, 2):
+for step in range(1, 50):
 	print step
 
 	os.system('mkdir -p %s/steps/%04d/mvs' % (root, step))
