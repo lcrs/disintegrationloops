@@ -8,7 +8,8 @@ for step in range(1, 50):
 	os.chdir('%s/steps/%04d/mvs' % (root, step))
 
 	if(step > 1):
-		os.system('PREVSTEP=%04d STEP=%04d hrender -e -f 1 20 -d mantra1 -v %s/step.hip' % (step-1, step, root))
+		#os.system('PREVSTEP=%04d STEP=%04d hrender -e -f 1 20 -d mantra1 -v %s/step.hip' % (step-1, step, root))
+		os.system('for ((i=1; i<51; i++)); do PREVSTEP=%04d STEP=%04d hrender -e -f $i $i -d mantra1 %s/disintegrationloops/step.hip & sleep 0.3; done' % (step-1, step, root))
 
 	os.system('python %s/disintegrationloops/sfm.py %s/steps/%04d/images %s/steps/%04d' % (root, root, step, root, step))
 
