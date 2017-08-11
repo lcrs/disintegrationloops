@@ -1,4 +1,6 @@
-python sfm.py /works/disintegrationloops/steps/0001/images /works/disintegrationloops/steps/0001
+#hrender -e -f 1 40 -d mantra1 -v /works/disintegrationloops/start.hip
+
+python /works/disintegrationloops/disintegrationloops/sfm.py /works/disintegrationloops/steps/0001/images /works/disintegrationloops/steps/0001
 
 mkdir /works/disintegrationloops/steps/0001/mvs/
 cd /works/disintegrationloops/steps/0001/mvs/
@@ -9,4 +11,4 @@ cd /works/disintegrationloops/steps/0001/mvs/
 /works/disintegrationloops/openmvs/openMVS_build/bin/ReconstructMesh /works/disintegrationloops/steps/0001/mvs/scene_dense.mvs
 
 /works/disintegrationloops/openmvs/openMVS_build/bin/TextureMesh --export-type obj /works/disintegrationloops/steps/0001/mvs/scene_dense_mesh.mvs
-
+cd -
