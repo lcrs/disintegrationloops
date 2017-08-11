@@ -1,4 +1,9 @@
-#hrender -e -f 1 40 -d mantra1 -v /works/disintegrationloops/start.hip
+
+
+#render initial images:
+#for ((i=1; i<26; i++)); do PREVSTEP=0000 STEP=0001 hrender -e -f $i $i -d mantra1 /works/disintegrationloops/disintegrationloops/step.hip & sleep 0.3; done; wait; echo done!!
+
+
 
 python /works/disintegrationloops/disintegrationloops/sfm.py /works/disintegrationloops/steps/0001/images /works/disintegrationloops/steps/0001
 

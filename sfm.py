@@ -1,3 +1,5 @@
+# Adapted from the OpenMVG example, this does images -> sparse point cloud and camera positions for each step
+
 # Indicate the openMVG binary directory
 OPENMVG_SFM_BIN = "/works/disintegrationloops/openmvg/openMVG_Build/Darwin-x86_64-RELEASE/"
 
